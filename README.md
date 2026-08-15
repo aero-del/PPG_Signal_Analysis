@@ -24,7 +24,7 @@ The implementation uses the **Pulse Transit Time (PTT) PPG Dataset** from Physio
 2. **Walking (`walk`):** Exhibits moderate motion artefacts and slight baseline variation.
 3. **Running (`run`):** Contains severe motion artefacts, frequency band corruption, and pronounced baseline wander.
 
-![Raw PPG signals across all conditions](r"Figures/raw_signal.png")
+![Raw PPG signals across all conditions]("Figures/raw_signal.png")
 
 **Dataset Specifications & Key Features**
 
