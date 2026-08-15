@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 # ==========================================
 # 1. LOADING & PREPROCESSING PPG SIGNAL
 # ==========================================
-PATH_SIT = r"D:\ntu_asses\physionet.org\files\pulse-transit-time-ppg\1.1.0\s10_sit"
+PATH_SIT = r"Data/s1_sit"
 sig, fields = wfdb.rdsamp(PATH_SIT)   # sig: (n_samples, n_channels) array; fields: header metadata dict
 fs = fields['fs']
 ch_idx = fields['sig_name'].index('pleth_1')
