@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt
 # ==========================================
 
 # WFDB record path, no extension (wfdb.rdrecord resolves .hea/.dat itself).
-RECORD_PATH = r"D:\ntu_asses\physionet.org\files\pulse-transit-time-ppg\1.1.0\s1_walk"
+RECORD_PATH = r"Data/s1_walk"
 
 PPG_CHANNEL = "pleth_1"          # which pleth_x column to treat as the PPG
 WINDOW_DURATION = 20.0            # seconds of the record to analyse, None = whole record
