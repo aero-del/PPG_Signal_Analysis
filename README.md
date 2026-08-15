@@ -122,6 +122,8 @@ The continuous PPG signal is segmented into single cardiac cycles using dynamic 
 5. **NLMS adaptive filter:** during motion only, predict the motion-correlated component of the band-passed PPG from the chosen IMU axis and subtract it; non-motion samples pass through unfiltered.
 6. **Re-score beats** on the cleaned signal with the same interval/amplitude/correlation check as Method-1, and compare rejection rate before vs. after filtering.
 
+[Adaptive filtering and Artefacts rejection](Figures/method-2.png)
+
 ### Algorithm Insights - Method-2
 
 * **Signal principle exploited:** motion artefacts are assumed to be an *additive, IMU-correlated* component in the PPG — sensor/skin displacement modulates the optical signal roughly linearly with motion. NLMS subtracts that predictable component out, with no labels needed.
