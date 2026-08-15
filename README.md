@@ -61,7 +61,7 @@ The implementation uses the **Pulse Transit Time (PTT) PPG Dataset** from Physio
 
 > **Note on Bandwidth Selection:** While the core fundamental heart rate lies within $0.5 - 6.0\text{ Hz}$, extending the upper cutoff to $8.0\text{ Hz}$ prevents morphological distortion of the dicrotic wave structure essential for higher-order statistical feature extraction.
 
-![Preprocessing]("Figures/preprocessing.png")
+![Preprocessing](Figures/preprocessing.png)
 
 #### 2. Signal Segmentation & Heart Period Estimation
 
@@ -76,7 +76,7 @@ The continuous PPG signal is segmented into single cardiac cycles using dynamic 
 
 > **Known simplification:** $T$ is estimated once per analysis window and used to slice the whole window into equal-length segments, rather than re-estimated per beat. HR drift within the window will progressively misalign beats inside their fixed-length slices — a limitation carried into the statistical evaluation below, not a per-beat dynamic segmentation.
 
-![segmenting the signals]("Figures/segmentation.png")
+![segmenting the signals](Figures/segmentation.png)
 
 #### 3. Statistical Quality Evaluation & Adaptive Thresholding
 
@@ -93,7 +93,7 @@ The continuous PPG signal is segmented into single cardiac cycles using dynamic 
     $$\mu_{\text{ref}} \leftarrow \alpha \cdot \mu_{\text{ref}} + (1 - \alpha) \cdot \text{metric}_i$$
   * **Motion Artifact:** If any condition fails, segment $i$ is flagged as a **MOTION ARTIFACT**, and existing baselines are retained.
 
-![statistical evaluation the signals]("Figures/fig3_skew_kurt_final_detection.png")
+![statistical evaluation the signals](Figures/fig3_skew_kurt_final_detection.png)
 
 ### 3. Algorithm Insights - Method-1
 
